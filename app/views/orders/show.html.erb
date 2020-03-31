@@ -1,5 +1,15 @@
 <section class="orders-show">
 
+  <% @order.line_items.each do |item| %>
+    <p><%= item.product.name %></p>
+    <img src="<%= item.product.image %>">
+    <p><%= item.product.description %></p>
+    <p><%= item.total_price %></p>
+    <p><%= item.quantity %></p>
+  <% end %>
+  <p><%= @order.email %></p>
+  <p><%= @order.total_cents %></p>
+
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
   </header>

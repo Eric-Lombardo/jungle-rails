@@ -6,7 +6,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def new
-    @product = Product.new
+    @category = Category.new
   end
 
   def create

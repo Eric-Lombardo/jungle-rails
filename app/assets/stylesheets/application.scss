@@ -15,3 +15,77 @@ body {
 form.button_to {
   display: inline;
 }
+
+// for admin pages
+.spinner {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #FFF7DB;
+  border: 8px solid transparent;
+  border-top-color: #583880;
+  border-bottom-color: #583880;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 2s linear infinite;
+  margin-bottom: 5em;
+  margin-right: 2em;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.count {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  top: 125px;
+  left: 35px;
+  z-index: 20;
+  font-size: 5em;
+  animation: opacity 1s linear;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.db-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: plum;
+  border-radius: 20px;
+  margin-bottom: 1em;
+
+  h1 {
+    font-size: 5em;
+  }
+
+  #category-count {
+    left: 55px;
+  }
+}
+
+.shadow {
+  width: 110px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(112, 87, 112);
+  opacity: 70%;
+  position: relative;
+  bottom: 30px;
+  left: 20px;
+}

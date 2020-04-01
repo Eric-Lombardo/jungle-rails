@@ -1,10 +1,22 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
-<%= @hello %>
+
+<div class="db-container">
+  <div>
+    <span class="count"><%= @products %></span>
+    <div class="spinner"></div>
+    <div class="shadow"></div>
+  </div>
+
+  <h1><a href="/admin/products">Products</a> in the database</h1>
+</div>
 
 
-<h1>how many products in the database: </h1>
-<h3>Count: <%= @products %></h3>
+<div class="db-container">
+  <div>
+    <span id="category-count" class="count"><%= @categories %></span>
+    <div class="spinner"></div>
+    <div class="shadow"></div>
+  </div>
 
-<h1>how many categories in the database: </h1>
-<h3>Count: <%= @categories %></h3>
+  <h1>Categories in the database</h1>
+</div>
+

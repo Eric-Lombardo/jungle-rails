@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   # user auth
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 
   resource :cart, only: [:show] do
     post   :add_item

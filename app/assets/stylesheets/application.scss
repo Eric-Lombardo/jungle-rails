@@ -154,3 +154,50 @@ form.button_to {
   top: 100px;
   right: 300px;
 }
+
+// signup form
+#signup-form {
+  background-color: #60c5ec;
+  position: relative;
+  left: 25%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+
+  div {
+    margin-top: 2em;
+    font-size: large;
+  }
+
+  h1 {
+    color: rgb(238, 88, 138);
+  }
+
+  input[type="text"], input[type="password"] {
+    background-color: #60c5ec;
+    outline: none;
+    border: 3px solid transparent;
+    border-bottom-color:  rgb(238, 88, 138);
+    color: #0f252e;
+    text-align: center;
+  }
+
+  ::placeholder {
+    color:  rgb(238, 79, 132)
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    outline: none;
+    background-color: rgb(238, 88, 138);
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    border: none;
+    border-radius: 20px;
+  }
+}

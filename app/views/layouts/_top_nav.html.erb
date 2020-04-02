@@ -52,7 +52,7 @@
 
 
         <% if current_user %>
-          <span id="user-greeting" class="navbar-text">Hello, <%= current_user.first_name %></span>
+          <span id="user-greeting" class="navbar-text">Hello, <%= current_user.first_name %> <%= current_user.last_name %></span>
           <li><%= link_to 'Logout', '/logout' %></li>
         <% else %>  
           <li><%= link_to 'Login', '/login' %></li>

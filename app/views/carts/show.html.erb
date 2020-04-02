@@ -10,7 +10,7 @@
       <p>Seems like your cart is empty. <strong>Treat yourself and splurge!</strong><br> 
       Come back here when you've picked out some items you want to buy!</p>
       <hr>
-      <p class="mb-0">Head on back to our <a href="/" class="alert-link">homepage</a> see what we have for sell ... some wierd items if you ask me</p>
+      <p class="mb-0">Head on back to our <a href="/" class="alert-link">homepage</a> and see what we have for sell ... some weird items if you ask me</p>
     </div>
   <% else %>
     <div class="panel panel-default items">
@@ -49,9 +49,21 @@
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-amount="<%= cart_subtotal_cents %>"
             data-name="Jungle"
-            data-description="Khurram Virani's Jungle Order"
+
+            <% if current_user %>
+            data-description="<%= current_user["first_name"] %> <%= current_user["last_name"] %>'s Jungle Order"
+            <% else %>
+            data-description="Guest's Jungle Order"
+            <% end %>
+
             data-locale="auto"
-            data-email="kvirani@gmail.com"
+
+            <% if current_user %>
+            data-email=<%= current_user["email"] %>
+            <% else %>
+            data-email="guest_user@no_email.com"
+            <% end %>
+
             data-currency="cad">
           </script>
         <% end %>

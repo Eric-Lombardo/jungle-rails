@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
+
+
   def new
   end
 
   def create
+    user_params[:email].strip!.downcase!
     user = User.new(user_params)
     if !User.where("email = ?", user_params["email"]).any? && user.save 
       session[:user_id] = user.id

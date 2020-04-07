@@ -20,15 +20,11 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
   scenario "They see product details of 1 specific product" do
     # ACT
     visit root_path
-    save_screenshot
     expect(page).to have_content 'My Cart (0)'
     find_button('Add', match: :first).click
     
-    # DEBUG
-    
     # VERIFY
     expect(page).to have_content 'My Cart (1)'
-    save_screenshot
   end
 
 end

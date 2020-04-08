@@ -2,11 +2,12 @@
 
 A mini e-commerce application built with Ruby on Rails 4.2
 
-This project was created to learn a new programming langauge and framework.
+This project was created to learn a new programming langauge (Ruby) and framework (Rails).
 
 ## Walkthrough
 ### On page load
 A user is shown all the products offered at the company. Each product displays their name, price, description and a badge that indicates if a product is sold out. If a product doesn't display a "Sold out" badge this indicates the product has at least 1 quantity in stock. If user would like to learn more about a product they can click on any product to see additional details. From the homepage, a user can add any product to their cart by clicking on the blue "Add" button.
+![all products](https://github.com/Eric-Lombardo/jungle-rails/blob/master/docs/all_products.png?raw=true)
 
 ### Navbar
 - Both the <strong>Jungle</strong> logo and <strong>Home</strong> will redirect you back to the product listings
@@ -30,11 +31,17 @@ After filling out the correct credentials to access these pages an admin can:
 5. view how many categories are currently in the database
 
 * <strong>Dashboards</strong> dropdown option will display the product and category counts in the database
+![dashboard](https://github.com/Eric-Lombardo/jungle-rails/blob/master/docs/admin_dashboard.png?raw=true)
 * <strong>Products</strong> dropdown option will display a detailed view of all the products. From here the admin can delete an existing product by clicking on the red trash can button. They can also create a new product by clicking on the blue "+ New product" button. From here they can fill out a form with the new product's details to enter a new product tot eh database.
+![admin_products](https://github.com/Eric-Lombardo/jungle-rails/blob/master/docs/admin_products.png?raw=true)
 * <strong>Categories</strong> dropdown option is very similar to the <strong>Products</strong> option, however the admin cannot delete an existing category but is only allowed to create new ones.
+![admin_categories](https://github.com/Eric-Lombardo/jungle-rails/blob/master/docs/admin_categories.png?raw=true)
 
 ### Cart
 If the cart is empty a warning will instruct the user to fill it up by adding items. Once the cart has at least 1 item they can view the products in their cart. From here, a user can increase or decrease the quantity of each product before checking out. To checkout out, click the blue "Pay with card" button. Once the user has filled out their credit card information (for testing purposes see the section below "Stripe testing") they are taken to a summary of their purchase.
+![cart](https://github.com/Eric-Lombardo/jungle-rails/blob/master/docs/cart.png?raw=true)
+![payment](https://github.com/Eric-Lombardo/jungle-rails/blob/master/docs/payment.png?raw=true)
+![order complete](https://github.com/Eric-Lombardo/jungle-rails/blob/master/docs/order_complete.png?raw=true)
 
 ### Login
 Displays a form where returning existing users can log in. Once logged in, the navabr will display the users name. Also, with every successful order completion an email will be sent that was used to sign-up (feature not yet implemented).
